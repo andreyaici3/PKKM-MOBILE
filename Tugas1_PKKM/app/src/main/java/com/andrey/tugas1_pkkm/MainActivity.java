@@ -21,24 +21,13 @@ public class MainActivity extends AppCompatActivity {
         TextView status = (TextView) findViewById(R.id.statusLogin);
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
-
-
-
-
-
         DBUser dbUser = new DBUser(this);
-
-
         dbUser.selct();
-
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 User u = dbUser.findUser();
-
-                Log.d("hmzz", String.valueOf(u.getUsername()));
 
                 if (String.valueOf(u.getUserId()).equals(etId.getText().toString()) && u.getUsername().equals(etUsername.getText().toString())){
                     status.setText("Login Berhasil");

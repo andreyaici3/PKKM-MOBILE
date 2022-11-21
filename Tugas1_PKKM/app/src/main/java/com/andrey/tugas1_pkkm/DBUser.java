@@ -1,5 +1,6 @@
 package com.andrey.tugas1_pkkm;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -7,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+
+import java.util.List;
 
 public class DBUser extends SQLiteAssetHelper {
 
@@ -30,23 +33,14 @@ public class DBUser extends SQLiteAssetHelper {
         return icount <= 0;
     }
 
-    public void selct(){
-        SQLiteDatabase db = this.getReadableDatabase();
-        String[] columns = new String[] { KEY_ID, KEY_USERNAME };
-        Cursor cursor = db.query(NAMA_TABEL, columns, null, null, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-        }
-
-
-
-    }
-
+    @SuppressLint("Range")
     public User findUser()
     {
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cursor=db.query(NAMA_TABEL,new  String[]{KEY_ID,KEY_USERNAME},null,null,null,null,null);
         User u = new User();
+
+
         if (cursor!=null && cursor.moveToFirst())
         {
             cursor.moveToFirst();
