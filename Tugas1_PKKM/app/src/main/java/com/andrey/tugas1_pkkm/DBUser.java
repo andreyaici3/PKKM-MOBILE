@@ -50,8 +50,8 @@ public class DBUser extends SQLiteAssetHelper {
         if (cursor!=null && cursor.moveToFirst())
         {
             cursor.moveToFirst();
-//            u.setUserId(cursor.getInt(cursor.getColumnIndex("id_pengguna")));
-//            u.setUsername(cursor.getString(cursor.getColumnIndex("username")));
+            u.setUserId(cursor.getInt(cursor.getColumnIndex("id_pengguna")));
+            u.setUsername(cursor.getString(cursor.getColumnIndex("username")));
         }else
         {
             u.setUserId(0);
