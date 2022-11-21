@@ -31,14 +31,14 @@ public class DBUser extends SQLiteAssetHelper {
     }
 
     public void selct(){
-        String countQuery = "SELECT  * FROM " + NAMA_TABEL;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        int rowCount = cursor.getCount();
-        db.close();
-        cursor.close();
+        String[] columns = new String[] { KEY_ID, KEY_USERNAME };
+        Cursor cursor = db.query(NAMA_TABEL, columns, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
 
-        Log.d("hmzz", String.valueOf(rowCount));
+
 
     }
 
@@ -50,8 +50,8 @@ public class DBUser extends SQLiteAssetHelper {
         if (cursor!=null && cursor.moveToFirst())
         {
             cursor.moveToFirst();
-            u.setUserId(cursor.getInt(cursor.getColumnIndex("id_pengguna")));
-            u.setUsername(cursor.getString(cursor.getColumnIndex("username")));
+//            u.setUserId(cursor.getInt(cursor.getColumnIndex("id_pengguna")));
+//            u.setUsername(cursor.getString(cursor.getColumnIndex("username")));
         }else
         {
             u.setUserId(0);

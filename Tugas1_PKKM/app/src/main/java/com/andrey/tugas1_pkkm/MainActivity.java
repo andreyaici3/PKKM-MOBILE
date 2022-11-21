@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
                 User u = dbUser.findUser();
 
+                Log.d("hmzz", String.valueOf(u.getUsername()));
+
                 if (String.valueOf(u.getUserId()).equals(etId.getText().toString()) && u.getUsername().equals(etUsername.getText().toString())){
                     status.setText("Login Berhasil");
                 } else {
