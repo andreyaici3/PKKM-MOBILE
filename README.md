@@ -16,6 +16,6 @@ Universitas : Universitas Kuningan
  
  ```
 1. Project Hallo Dunia 
-2. Project Tugas 1
+2. Project Tugas 1 - Membuat Halaman Login (Tugas1_PKKM)
 3. Project Tugas 2
 ```
