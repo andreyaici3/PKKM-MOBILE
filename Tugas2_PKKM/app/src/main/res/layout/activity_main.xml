@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:textStyle="bold"
+       android:gravity="center_horizontal"
+       android:textColor="@color/black"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20dp"
+       android:text="KAMUS" />
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KAMUS BAHASA INDONESIA > BAHASA SUNDA" />
+
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bahasa Indonesia"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:background="@drawable/border"
+        android:layout_marginTop="5dp"
+        android:id="@+id/bIndonesia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bahasa Indonesia"
+        android:paddingLeft="15dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bahasa Sunda"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:background="@drawable/border"
+        android:layout_marginTop="5dp"
+        android:id="@+id/bSunda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bahasa Sunda"
+        android:paddingLeft="15dp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnTerjemahkan"
+        android:theme="@style/Theme.btn"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TERJEMAHKAN" />
+
+
+ <TextView
+     android:gravity="center_horizontal"
+     android:layout_marginTop="25dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="2022 - Andrey Andriansyah"
+     android:textColor="@color/black" />
+
+
+
+
+
+</LinearLayout>
