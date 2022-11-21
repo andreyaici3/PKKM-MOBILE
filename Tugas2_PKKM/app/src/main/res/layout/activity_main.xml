@@ -23,7 +23,7 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="KAMUS BAHASA INDONESIA > BAHASA SUNDA" />
+        android:text="BAHASA INDONESIA > BAHASA SUNDA" />
 
 
     <TextView
@@ -52,6 +52,7 @@
         android:textColor="@color/black" />
 
     <EditText
+        android:focusable="false"
         android:maxLines="1"
         android:background="@drawable/border"
         android:layout_marginTop="5dp"

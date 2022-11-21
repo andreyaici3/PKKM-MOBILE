@@ -12,10 +12,11 @@ Universitas : Universitas Kuningan
 ```
 
 
- `ISI REPOSITORY`
+ `ISI REPOSITORY - DAY 1`
  
  ```
 1. Project Hallo Dunia 
 2. Project Tugas 1 - Membuat Halaman Login (Tugas1_PKKM)
-3. Project Tugas 2
+3. Project Tugas 2 - Membuat Kamus Bahasa Indonesia Ke Bahasa Sunda (Tugas2_PKKM)
 ```
+
