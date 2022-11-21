@@ -38,6 +38,7 @@ public class DBUser extends SQLiteAssetHelper {
         db.close();
         cursor.close();
 
+        Log.d("hmzz", String.valueOf(rowCount));
 
     }
 
@@ -58,7 +59,7 @@ public class DBUser extends SQLiteAssetHelper {
         }
         db.close();
 
-        Log.d("hmzz", u.getUsername());
+
         return u;
     }
 
