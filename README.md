@@ -1,6 +1,6 @@
 # PKKM - MOBILE APLIKASI
 
-Peningkatan Mahasiswa Dalam Penguasaan Pembuatan Aplikasi Perangkat Mobile `Bersama Pemateri dari CV. Pilude`
+Peningkatan Mahasiswa Dalam Penguasaan Pembuatan Aplikasi Perangkat Mobile `Bersama Pemateri dari CV. Prilude`
 
 ```
 Nama Lengkap: Andrey Andriansyah
