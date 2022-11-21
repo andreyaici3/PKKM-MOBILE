@@ -34,6 +34,7 @@
         android:textColor="@color/black" />
 
     <EditText
+        android:maxLines="1"
         android:background="@drawable/border"
         android:layout_marginTop="5dp"
         android:id="@+id/bIndonesia"
@@ -51,6 +52,7 @@
         android:textColor="@color/black" />
 
     <EditText
+        android:maxLines="1"
         android:background="@drawable/border"
         android:layout_marginTop="5dp"
         android:id="@+id/bSunda"
