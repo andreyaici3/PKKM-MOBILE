@@ -34,10 +34,10 @@ public class DBUser extends SQLiteAssetHelper {
     }
 
     @SuppressLint("Range")
-    public User findUser()
+    public User findUser(String id, String username)
     {
         SQLiteDatabase db=this.getReadableDatabase();
-        Cursor cursor=db.query(NAMA_TABEL,new  String[]{KEY_ID,KEY_USERNAME},null,null,null,null,null);
+        Cursor cursor=db.query(NAMA_TABEL,new  String[]{KEY_ID, KEY_USERNAME},"id_pengguna = ? and username = ?",new String[]{id, username},null,null,null);
         User u = new User();
 
 

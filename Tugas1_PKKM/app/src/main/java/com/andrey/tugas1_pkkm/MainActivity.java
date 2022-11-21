@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
         DBUser dbUser = new DBUser(this);
-        dbUser.selct();
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                User u = dbUser.findUser();
+                User u = dbUser.findUser(etId.getText().toString(), etUsername.getText().toString());
 
                 if (String.valueOf(u.getUserId()).equals(etId.getText().toString()) && u.getUsername().equals(etUsername.getText().toString())){
                     status.setText("Login Berhasil");
