@@ -32,15 +32,13 @@
         android:inputType="text" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_id_Login"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="LOGIN"
-        android:background="@drawable/gradient_btn"
-        android:textAllCaps="false">
+        android:background="@drawable/gradient_btn">
     </androidx.appcompat.widget.AppCompatButton>
 
 
