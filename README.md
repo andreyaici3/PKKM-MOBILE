@@ -25,7 +25,7 @@ Universitas : Universitas Kuningan
 ```
 1. Project Hallo Hari Kedua
 2. Project Tugas 1 - Membuat Halaman Login (Tugas1_PKKM) - Update Warna Button Gradasi
-3. 
-
+3. Project BelajarKoneksi
+4. Project Tugas 2 - Membuat Halaman Utama E-Commerce (Tugas2_PKKM)
 ```
 
