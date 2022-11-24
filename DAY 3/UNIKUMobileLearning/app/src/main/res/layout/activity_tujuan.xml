@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
-    android:orientation="vertical"
-    tools:context=".TentangActivity">
-
+    tools:context=".TujuanActivity"
+    android:padding="@dimen/default_padding"
+    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tentang" />
-
+        android:id="@+id/tvIsi"
+        />
 </LinearLayout>

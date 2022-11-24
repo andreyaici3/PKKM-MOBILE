@@ -10,17 +10,18 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.andrey.inovasipembelajaran.model.DBMateri;
+import com.andrey.inovasipembelajaran.model.Materi;
 
-public class PetaKonsep extends AppCompatActivity {
+public class MateriActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_peta_konsep);
-
-        setTitle("Peta Konsep");
+        setContentView(R.layout.activity_materi);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Materi");
 
-        DBMateri dbMateri = new DBMateri(PetaKonsep.this, "peta");
+
+        DBMateri dbMateri = new DBMateri(MateriActivity.this, "materi");
         if (dbMateri.isNull())
         {
             Log.d("test", "kosong");
@@ -33,6 +34,7 @@ public class PetaKonsep extends AppCompatActivity {
         TextView judul = (TextView) findViewById(R.id.judul);
         judul.setText("Materi Dari SQLite");
         isi.setText(dbMateri.findMateri().getIsi());
+
     }
 
     @Override

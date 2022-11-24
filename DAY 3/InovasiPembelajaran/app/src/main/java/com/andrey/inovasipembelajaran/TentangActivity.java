@@ -9,23 +9,17 @@ import android.widget.Button;
 
 public class TentangActivity extends AppCompatActivity {
 
-    private Button kembali;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tentang);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Tentang Aplikasi");
+    }
 
-        kembali = (Button) findViewById(R.id.buttonKembali);
-
-        kembali.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(TentangActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

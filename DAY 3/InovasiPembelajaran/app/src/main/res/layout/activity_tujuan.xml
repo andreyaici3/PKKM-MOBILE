@@ -9,15 +9,20 @@
     tools:context=".TujuanActivity">
 
     <TextView
+        android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tujuan_pembelajaran" />
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="judul" />
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/buttonKembali"
+    <TextView
+        android:id="@+id/isi"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="kembali" />
+        android:text="" />
 
 </LinearLayout>

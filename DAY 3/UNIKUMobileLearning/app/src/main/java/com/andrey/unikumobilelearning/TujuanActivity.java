@@ -1,12 +1,14 @@
-package com.andrey.inovasipembelajaran;
+package com.andrey.unikumobilelearning;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.andrey.inovasipembelajaran.model.DBMateri;
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -22,46 +24,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class PertanyaanPemantik extends AppCompatActivity {
-
-    final String url = "https://apps.priludestudio.com/pelatihan/pemantik.php";
-    RequestQueue queue;
-    private TextView isi, judul;
-
+public class TujuanActivity extends AppCompatActivity {
+    private RequestQueue queue;
+    private TextView tvIsi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pertanyaan_pemantik);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_tujuan);
+        setTitle("Tujuan Pembelajaran");
 
-        judul = (TextView) findViewById(R.id.judul);
-        isi = (TextView) findViewById(R.id.isi);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
+        tvIsi = (TextView) findViewById(R.id.tvIsi);
         ambilData();
+    }
 
-
-        setTitle("Pertanyaan Pemantik");
-
-
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void ambilData()
     {
-        queue = Volley.newRequestQueue(PertanyaanPemantik.this);
+        queue = Volley.newRequestQueue(TujuanActivity.this);
+        String url = "https://apps.priludestudio.com/pelatihan/tujuan.php";
+
         StringRequest jsonObjReq = new
                 StringRequest(Request.Method.GET,
                         url,new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
                         try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            JSONObject mater = jsonObject.getJSONObject("materi");
-                            Log.d("test", mater.getString("judul"));
-                            judul.setText(mater.getString("judul"));
-                            isi.setText(mater.getString("isi"));
-                        } catch (Exception e){
+                            JSONObject jsonObject=new JSONObject(response);
+                            JSONObject priludeObj=jsonObject.getJSONObject("materi");
+                            String materi = priludeObj.getString("isi");
+                            tvIsi.setText(materi);
+
+                            Log.d("test",materi);
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -94,11 +100,5 @@ public class PertanyaanPemantik extends AppCompatActivity {
                         DEFAULT_MAX_RETRIES,
                         DEFAULT_BACKOFF_MULT));
         queue.add(jsonObjReq);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
     }
 }

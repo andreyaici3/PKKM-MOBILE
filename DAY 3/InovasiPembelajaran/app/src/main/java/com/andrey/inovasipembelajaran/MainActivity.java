@@ -2,6 +2,7 @@
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,41 +28,28 @@ import android.widget.Button;
         tujuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, TujuanActivity.class);
-                startActivity(i);
+                pindahIntent(TujuanActivity.class);
             }
         });
 
         pemantik.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, PertanyaanPemantik.class);
-                startActivity(i);
-            }
+            public void onClick(View view) { pindahIntent(PertanyaanPemantik.class); }
         });
 
         petaKonsep.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, PetaKonsep.class);
-                startActivity(i);
-            }
+            public void onClick(View view) { pindahIntent(PetaKonsep.class); }
         });
 
         materi.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Materi.class);
-                startActivity(i);
-            }
+            public void onClick(View view) { pindahIntent(MateriActivity.class); }
         });
 
         tentang.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, TentangActivity.class);
-                startActivity(i);
-            }
+            public void onClick(View view) { pindahIntent(TentangActivity.class); }
         });
 
     }
@@ -72,6 +60,11 @@ import android.widget.Button;
         petaKonsep = (Button) findViewById(R.id.petaKonsep);
         materi = (Button) findViewById(R.id.materi);
         tentang = (Button) findViewById(R.id.tentangAplikasi);
+    }
+
+    void pindahIntent(Class java){
+        Intent i = new Intent(MainActivity.this, java);
+        startActivity(i);
     }
 
 
