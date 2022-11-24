@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">InovasiPembelajaran</string>
+    <string name="tujuan_pembelajaran">Setelah mempelajari bab ini, kalian
+mampu berkolaborasi dalam tim dan mengomunikasikan hasilnya dengan efektif
+dan efisien.</string>
+    <string name="pemantik">isi pertanyaan pemantik</string>
+    <string name="peta">isi peta konsep</string>
+    <string name="tentang">isi tentang apllikasi</string>
+
+    <string name="materi">isi materi</string>
 </resources>
